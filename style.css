@@ -1,0 +1,67 @@
+* {
+}
+
+.benefit-card {
+  background: white;
+  padding: 40px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  color: #b30000;
+  margin-bottom: 15px;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+footer h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+@media(max-width: 900px) {
+
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content h2 {
+    font-size: 42px;
+  }
+
+  .system-card {
+    padding: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+}
