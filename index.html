@@ -1,88 +1,219 @@
 <!DOCTYPE html>
-      <div class="result-card" id="resultado">
+<html lang="pt-br">
+<head>
 
-        <h3>
-          <i class="fa-solid fa-circle-check"></i>
-          Melhor Rota Encontrada
-        </h3>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <p>
-          Aguardando cálculo...
-        </p>
+  <title>LOGISTIC - Sistema Inteligente</title>
 
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+</head>
+<body>
+
+<header class="header">
+
+  <div class="logo">
+    <i class="fa-solid fa-truck-fast"></i>
+    <span>LOGISTIC</span>
+  </div>
+
+  <nav class="menu">
+    <a href="#" class="active">Início</a>
+    <a href="#roteirizador">Roteirizador</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <button class="login-btn">
+    <i class="fa-regular fa-user"></i>
+    Entrar
+  </button>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-left">
+
+    <h1>Bem Vindo De Volta!</h1>
+
+    <h3>LOGISTIC ajudando sempre no trânsito</h3>
+
+    <p>
+      Otimize suas entregas, economize tempo e combustível
+      com nosso sistema inteligente de rotas.
+    </p>
+
+    <div class="search-location">
+
+      <i class="fa-solid fa-location-dot"></i>
+
+      <input
+        type="text"
+        placeholder="Coloque a localização"
+      >
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-right">
+
+    <img
+      src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1200&auto=format&fit=crop"
+      alt="Caminhão"
+    >
+
+  </div>
+
+</section>
+
+
+<section class="features" id="servicos">
+
+  <h2>Nossos diferenciais</h2>
+
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="icon">
+        <i class="fa-solid fa-bolt"></i>
       </div>
 
-    </div>
-
-  </section>
-
-
-  <section class="benefits">
-
-    <div>
-      <i class="fa-solid fa-gas-pump"></i>
-      Economia de combustível
-    </div>
-
-
-    <div>
-      <i class="fa-regular fa-clock"></i>
-      Menos tempo nas entregas
-    </div>
-
-
-    <div>
-      <i class="fa-solid fa-arrows-rotate"></i>
-      Mais eficiência logística
-    </div>
-
-
-    <div>
-      <i class="fa-regular fa-clipboard"></i>
-      Relatórios detalhados
-    </div>
-
-  </section>
-
-
-  <footer id="contato">
-
-    <div class="footer-content">
-
-      <div class="footer-logo">
-
-        <i class="fa-solid fa-truck-fast"></i>
-
-        <span>LOGISTIC</span>
-
-      </div>
-
+      <h3>Caminho mais rápido</h3>
 
       <p>
-        Movendo o que importa.
+        Encontre as rotas mais rápidas e eficientes.
       </p>
 
     </div>
 
 
-    <div class="footer-copy">
-      © 2026 LOGISTIC. Todos os direitos reservados.
+    <div class="card">
+
+      <div class="icon">
+        <i class="fa-solid fa-globe"></i>
+      </div>
+
+      <h3>Trânsito em tempo real</h3>
+
+      <p>
+        Evite congestionamentos e atrasos.
+      </p>
+
     </div>
 
 
-    <div class="social-icons">
+    <div class="card">
 
-      <i class="fa-brands fa-facebook-f"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-whatsapp"></i>
-      <i class="fa-brands fa-linkedin-in"></i>
+      <div class="icon">
+        <i class="fa-solid fa-shield"></i>
+      </div>
+
+      <h3>Mais segurança</h3>
+
+      <p>
+        Rotas planejadas para proteger sua carga.
+      </p>
 
     </div>
 
-  </footer>
+  </div>
+
+</section>
 
 
-  <script src="script.js"></script>
+<section class="route-system" id="roteirizador">
+
+  <div class="route-panel">
+
+    <h2>
+      <i class="fa-solid fa-route"></i>
+      Roteirizador Inteligente
+    </h2>
+
+    <p>
+      Digite os pontos para calcular a melhor rota.
+    </p>
+
+    <textarea
+      id="rotas"
+      placeholder="Exemplo: Centro, Mercado, Escola, Hospital"
+    ></textarea>
+
+    <button
+      class="calculate-btn"
+      onclick="calcularRota()"
+    >
+
+      <i class="fa-solid fa-route"></i>
+      Calcular Melhor Rota
+
+    </button>
+
+    <button
+      class="clear-btn"
+      onclick="limparCampos()"
+    >
+
+      <i class="fa-regular fa-trash-can"></i>
+      Limpar
+
+    </button>
+
+  </div>
+
+
+  <div class="map-container">
+
+    <img
+      src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1400&auto=format&fit=crop"
+      alt="Mapa"
+    >
+
+    <div class="result-card" id="resultado">
+
+      <h3>✅ Melhor Rota Encontrada</h3>
+
+      <p>
+        Aguardando cálculo...
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer id="contato">
+
+  <div class="footer-logo">
+
+    <i class="fa-solid fa-truck-fast"></i>
+
+    <span>LOGISTIC</span>
+
+  </div>
+
+  <p>
+    © 2026 LOGISTIC. Todos os direitos reservados.
+  </p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
