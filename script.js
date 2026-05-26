@@ -1,77 +1,81 @@
-function calcularRota() {
-  let pontos = input
-    .split(',')
-    .map(p => p.trim())
-    .filter(p => p !== '');
-
-  if(pontos.length < 2) {
-
-    resultado.innerHTML = `
-      <h3>⚠️ Erro</h3>
-
-      <div class="rota">
-        Digite pelo menos 2 pontos de entrega.
-      </div>
-    `;
-
-    return;
-  }
-
-  let rota = [...pontos];
-
-  for(let i = rota.length - 1; i > 0; i--) {
-
-    const j = Math.floor(Math.random() * (i + 1));
-
-    [rota[i], rota[j]] = [rota[j], rota[i]];
-  }
-
-  const distancia = (Math.random() * 80 + 20).toFixed(2);
-
-  const tempo = (distancia / 40).toFixed(1);
-
-  resultado.innerHTML = `
-
-    <h3>✅ Melhor Rota Encontrada</h3>
-
-    <div class="rota">
-
-      <strong>📍 Ordem de Entrega:</strong>
-
-      <br><br>
-
-      ${rota.join(' ➜ ')}
-
-      <br><br>
-
-      <strong>📏 Distância Total:</strong>
-      ${distancia} km
-
-      <br>
-
-      <strong>⏱️ Tempo Estimado:</strong>
-      ${tempo} horas
-
-      <br><br>
-
-      ✔️ Economia de combustível<br>
-      ✔️ Melhor desempenho logístico<br>
-      ✔️ Otimização inteligente de entregas
-
-    </div>
-  `;
+* {
+.rota {
+  line-height: 2;
+  font-size: 18px;
 }
 
-function limparCampos() {
+.benefits {
+  padding: 40px 20px 80px;
 
-  document.getElementById('pontos').value = '';
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 
-  document.getElementById('resultado').innerHTML = `
+  max-width: 1200px;
+  margin: auto;
+}
 
-    <h3>Resultado da Otimização</h3>
+.benefit-card {
+  background: white;
+  padding: 40px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
-    <div class="rota">
-      Aguardando processamento...
-    </div>
-  `;
+.icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  color: #b30000;
+  margin-bottom: 15px;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+footer h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+@media(max-width: 900px) {
+
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content h2 {
+    font-size: 42px;
+  }
+
+  .system-card {
+    padding: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
 }
