@@ -1,58 +1,70 @@
-function calcularRota() {
+function calcularRota(){
 
-  const input = document.getElementById("pontos").value;
+  const input = document.getElementById("rotas").value;
 
   const resultado = document.getElementById("resultado");
 
-  if(input.trim() === "") {
+  if(input.trim() === ""){
 
     resultado.innerHTML = `
-      ⚠️ Digite uma localização.
+      <h3>⚠️ Erro</h3>
+      <p>Digite os pontos de entrega.</p>
     `;
 
     return;
   }
 
   let pontos = input
-    .split(",")
-    .map(p => p.trim())
-    .filter(p => p !== "");
+  .split(",")
+  .map(p => p.trim())
+  .filter(p => p !== "");
 
   let rota = [...pontos];
 
-  for(let i = rota.length - 1; i > 0; i--) {
+  for(let i = rota.length - 1; i > 0; i--){
 
     const j = Math.floor(Math.random() * (i + 1));
 
     [rota[i], rota[j]] = [rota[j], rota[i]];
   }
 
-  const distancia = (Math.random() * 50 + 10).toFixed(2);
+  const distancia = (Math.random() * 20 + 5).toFixed(1);
 
-  const tempo = (distancia / 45).toFixed(1);
+  const tempo = (distancia / 40).toFixed(1);
 
   resultado.innerHTML = `
 
-    <strong>📍 Melhor rota:</strong>
+    <h3>✅ Melhor Rota Encontrada</h3>
 
-    <br><br>
+    <p>
 
-    ${rota.join(" ➜ ")}
+      <strong>📍 Rota:</strong>
 
-    <br><br>
+      <br><br>
 
-    <strong>📏 Distância:</strong>
-    ${distancia} km
+      ${rota.join(" ➜ ")}
 
-    <br>
+      <br><br>
 
-    <strong>⏱️ Tempo estimado:</strong>
-    ${tempo} horas
+      <strong>📏 Distância:</strong>
+      ${distancia} km
 
-    <br><br>
+      <br><br>
 
-    ✅ Menor trânsito<br>
-    ✅ Economia de combustível<br>
-    ✅ Melhor eficiência logística
+      <strong>⏱️ Tempo estimado:</strong>
+      ${tempo} horas
+
+    </p>
+
+  `;
+}
+
+function limparCampos(){
+
+  document.getElementById("rotas").value = "";
+
+  document.getElementById("resultado").innerHTML = `
+    <h3>✅ Melhor Rota Encontrada</h3>
+    <p>Aguardando cálculo...</p>
   `;
 }
