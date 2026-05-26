@@ -1,25 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <div class="result-card" id="resultado">
 
-  <title>LOGISTIC</title>
+        <h3>
+          <i class="fa-solid fa-circle-check"></i>
+          Melhor Rota Encontrada
+        </h3>
 
-  <link rel="stylesheet" href="style.css">
+        <p>
+          Aguardando cálculo...
+        </p>
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  >
-</head>
-<body>
+      </div>
 
-  <div class="app">
+    </div>
 
-    <header class="topbar">
+  </section>
 
-      <div class="logo">
+
+  <section class="benefits">
+
+    <div>
+      <i class="fa-solid fa-gas-pump"></i>
+      Economia de combustível
+    </div>
+
+
+    <div>
+      <i class="fa-regular fa-clock"></i>
+      Menos tempo nas entregas
+    </div>
+
+
+    <div>
+      <i class="fa-solid fa-arrows-rotate"></i>
+      Mais eficiência logística
+    </div>
+
+
+    <div>
+      <i class="fa-regular fa-clipboard"></i>
+      Relatórios detalhados
+    </div>
+
+  </section>
+
+
+  <footer id="contato">
+
+    <div class="footer-content">
+
+      <div class="footer-logo">
 
         <i class="fa-solid fa-truck-fast"></i>
 
@@ -27,106 +57,30 @@
 
       </div>
 
-      <button class="route-btn">
-        Digite sua rota
-      </button>
-
-    </header>
-
-
-    <section class="hero">
-
-      <h1>
-        Bem Vindo De Volta!
-      </h1>
 
       <p>
-        Logistic ajudando sempre no trânsito
+        Movendo o que importa.
       </p>
 
-      <div class="search-box">
-
-        <input
-          type="text"
-          id="pontos"
-          placeholder="Coloque a localização"
-        >
-
-      </div>
-
-    </section>
+    </div>
 
 
-    <section class="offers">
-
-      <h3>Our offerings</h3>
-
-      <div class="cards">
-
-        <div class="card">
-
-          <i class="fa-solid fa-bolt"></i>
-
-          <p>Caminho mais rápido</p>
-
-        </div>
-
-        <div class="card">
-
-          <i class="fa-solid fa-globe"></i>
-
-          <p>Saiba mais sobre o trânsito</p>
-
-        </div>
-
-        <div class="card">
-
-          <i class="fa-regular fa-shield"></i>
-
-          <p>Rota mais segura</p>
-
-        </div>
-
-      </div>
-
-    </section>
+    <div class="footer-copy">
+      © 2026 LOGISTIC. Todos os direitos reservados.
+    </div>
 
 
-    <section class="links">
+    <div class="social-icons">
 
-      <a href="#">Contato</a>
-      <a href="#">Social</a>
-      <a href="#">Localização</a>
-      <a href="#">Termos Legais</a>
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-whatsapp"></i>
+      <i class="fa-brands fa-linkedin-in"></i>
 
-    </section>
+    </div>
 
+  </footer>
 
-    <section class="map-area">
-
-      <img
-        src="https://maps.googleapis.com/maps/api/staticmap?center=Sao+Paulo&zoom=13&size=900x400&maptype=roadmap&markers=color:red%7CSao+Paulo"
-        alt="Mapa"
-      >
-
-    </section>
-
-
-    <section class="result-section">
-
-      <button class="calculate-btn" onclick="calcularRota()">
-        Calcular Melhor Rota
-      </button>
-
-      <div class="resultado" id="resultado">
-
-        Aguardando processamento...
-
-      </div>
-
-    </section>
-
-  </div>
 
   <script src="script.js"></script>
 
