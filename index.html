@@ -1,62 +1,132 @@
 <!DOCTYPE html>
-          🗑️ Limpar
-        </button>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LOGISTIC</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="topbar">
+
+      <div class="logo">
+
+        <i class="fa-solid fa-truck-fast"></i>
+
+        <span>LOGISTIC</span>
 
       </div>
 
-      <div class="resultado" id="resultado">
+      <button class="route-btn">
+        Digite sua rota
+      </button>
 
-        <h3>Resultado da Otimização</h3>
+    </header>
 
-        <div class="rota">
-          Aguardando processamento...
+
+    <section class="hero">
+
+      <h1>
+        Bem Vindo De Volta!
+      </h1>
+
+      <p>
+        Logistic ajudando sempre no trânsito
+      </p>
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="pontos"
+          placeholder="Coloque a localização"
+        >
+
+      </div>
+
+    </section>
+
+
+    <section class="offers">
+
+      <h3>Our offerings</h3>
+
+      <div class="cards">
+
+        <div class="card">
+
+          <i class="fa-solid fa-bolt"></i>
+
+          <p>Caminho mais rápido</p>
+
+        </div>
+
+        <div class="card">
+
+          <i class="fa-solid fa-globe"></i>
+
+          <p>Saiba mais sobre o trânsito</p>
+
+        </div>
+
+        <div class="card">
+
+          <i class="fa-regular fa-shield"></i>
+
+          <p>Rota mais segura</p>
+
         </div>
 
       </div>
 
-    </div>
-
-  </main>
+    </section>
 
 
-  <section class="benefits" id="beneficios">
+    <section class="links">
 
-    <div class="benefit-card">
-      <div class="icon">⛽</div>
-      <h3>Economia</h3>
-      <p>Redução de combustível e custos operacionais.</p>
-    </div>
+      <a href="#">Contato</a>
+      <a href="#">Social</a>
+      <a href="#">Localização</a>
+      <a href="#">Termos Legais</a>
 
-    <div class="benefit-card">
-      <div class="icon">⚡</div>
-      <h3>Velocidade</h3>
-      <p>Maior rapidez na entrega de pedidos.</p>
-    </div>
-
-    <div class="benefit-card">
-      <div class="icon">📍</div>
-      <h3>Organização</h3>
-      <p>Controle inteligente dos pontos de entrega.</p>
-    </div>
-
-  </section>
+    </section>
 
 
-  <footer id="contato">
+    <section class="map-area">
 
-    <h2>LOGISTIC</h2>
+      <img
+        src="https://maps.googleapis.com/maps/api/staticmap?center=Sao+Paulo&zoom=13&size=900x400&maptype=roadmap&markers=color:red%7CSao+Paulo"
+        alt="Mapa"
+      >
 
-    <p>
-      Projeto acadêmico desenvolvido utilizando conceitos de
-      Team Software Process (TSP).
-    </p>
+    </section>
 
-    <span>
-      © 2026 - Sistema Inteligente de Logística
-    </span>
 
-  </footer>
+    <section class="result-section">
 
+      <button class="calculate-btn" onclick="calcularRota()">
+        Calcular Melhor Rota
+      </button>
+
+      <div class="resultado" id="resultado">
+
+        Aguardando processamento...
+
+      </div>
+
+    </section>
+
+  </div>
 
   <script src="script.js"></script>
 
