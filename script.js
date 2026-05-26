@@ -15,9 +15,9 @@ function calcularRota(){
   }
 
   let pontos = input
-  .split(",")
-  .map(p => p.trim())
-  .filter(p => p !== "");
+    .split(",")
+    .map(p => p.trim())
+    .filter(p => p !== "");
 
   let rota = [...pontos];
 
@@ -53,6 +53,12 @@ function calcularRota(){
 
       <strong>⏱️ Tempo estimado:</strong>
       ${tempo} horas
+
+      <br><br>
+
+      ✔️ Economia de combustível<br>
+      ✔️ Menos tempo nas entregas<br>
+      ✔️ Melhor eficiência logística
 
     </p>
 
